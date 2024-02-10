@@ -1,0 +1,98 @@
+body {
+  font-family: 'Poppins', sans-serif !important;
+font-family: 'Roboto', sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::after {
+  content: '';
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/free-photo/full-frame-shot-cloudscape-with-plane-flying_1359-521.jpg?w=740&t=st=1707199400~exp=1707200000~hmac=c6a2af7698b65d3848546f979d9afc72cd2c8932f43f8434c571d3d91057e18e);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.transparent-style {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  color: white !important;
+  text-align: center;
+  border: none !important;
+}
+.transparent-style::placeholder {
+  color: white !important;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.custom-text-color {
+  color: white !important;
+}
+
+
+.custom-text-color.active {
+  color: rgb(255, 193, 7) !important;
+}
+
+
+.rotate-90 {
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+  /* Add a smooth transition effect */
+}
+
+.rotate-90:hover {
+  transform: rotate(90deg) !important;
+  /* Keep the rotation even on hover */
+}
+
+.btn-custom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-custom .bi-airplane {
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-custom:hover .bi-airplane {
+  transform: rotate(90deg);
+  /* transform: translateX(5px); */
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-custom:active .bi-airplane {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(1rem);
+}
+
+.modal-dialog {
+  background-color: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal.fade .modal-dialog {
+  transform: translate(0, -100%);
+}
+
+.modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
